@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,5 +9,31 @@ namespace WorkSchedule.Framework.Entities
 {
     public class Location
     {
+        [Key]
+        [Required(ErrorMessage="Location: A LocationID  is required")]
+        public int LocationID { get; set; }
+        [Required(ErrorMessage="Location: A Name is required(1-50 characters")]
+        [StringLength(
+            50, 
+            MinimumLength=1, 
+            ErrorMessage="Location.Name: Length cannot exceed 50 characters")]
+        public string Name { get; set; }
+        [Required( ErrorMessage = "Location: A Street is required(1-50 characters")]
+        [StringLength(
+            50,
+            MinimumLength=1,
+            ErrorMessage = "Location.Street: Length cannot exceed 50 characters")]
+        public string Street { get; set; }
+        [Required( ErrorMessage = "Location: A City is required(1-30 characters")]
+        [StringLength(
+            30,
+            MinimumLength=1,
+            ErrorMessage = "Location.City: Length cannot exceed 30 characters")]
+        public string Name { get; set; }
+        [Required(ErrorMessage = "Location: A Province is required(2 characters")]
+        [StringLength(
+            2,
+            ErrorMessage = "Location.Name: Length must be exactly 2 characters")]
+        public string Name { get; set; }
     }
 }
