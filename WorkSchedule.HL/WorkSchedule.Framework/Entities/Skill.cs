@@ -12,10 +12,16 @@ namespace WorkSchedule.Framework.Entities
         [Key]
         [Required(ErrorMessage = "Skill: A SkillID is required")]
         public int SkillID { get; set; }
+
         [Required(ErrorMessage="Skill: A Description is required(1-100 characters)")]
         [StringLength(100,MinimumLength=1, ErrorMessage="Skill.Description: Length cannot exceed 100 characters")]
         public string Description { get; set; }
+
         [Required(ErrorMessage="Skill: A RequiresTicket flag must be marked")]
         public bool RequiresTicket { get; set; }
+
+        // Navigation Properties
+        // To Many  
+        public virtual ICollection<EmployeeSkill> EmployeeSkill { get; set; }
     }
 }
