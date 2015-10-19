@@ -1,0 +1,12 @@
+Validation
+1. Where do we need to put validation? all layers?
+
+Constraints
+1. Do we put constraints on all layers, Presentation, Business logic, Data access and in the database?
+2. Why?
+
+
+Errors
+
+1. Do we put error messages on all the layers?
+2. 
