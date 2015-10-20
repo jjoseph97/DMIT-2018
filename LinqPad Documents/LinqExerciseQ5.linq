@@ -14,3 +14,8 @@ select new
 {
 	Name = employeeSkills.Employee.FirstName + " " + employeeSkills.Employee.LastName 
 }
+/*
+from employeeSkills in EmployeeSkills
+where employeeSkills.YearsOfExperience != null
+select employeeSkills.YearsOfExperience.Max()
+*/
