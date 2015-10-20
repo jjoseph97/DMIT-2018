@@ -30,7 +30,7 @@ namespace WorkSchedule.Framework.Entities
         public string Province { get; set; }
 
         [StringLength(50,MinimumLength=0,ErrorMessage = "Location.Contact: Length cannot exceed 50 characters")]
-        public string? Contact { get; set; }
+        public string Contact { get; set; }
 
         [Phone]
         [Required(ErrorMessage="Location: A Phone is required(12)")]
@@ -41,11 +41,13 @@ namespace WorkSchedule.Framework.Entities
         public bool Active { get; set; }
 
         // Navigation Properties
-        public virtual ICollection<PlacementContract> PlacementContract { get; set; }
+        // To Many
+        public virtual ICollection<PlacementContract> PlacementContracts { get; set; }
+        // To One
 
 
         // Constructor for Default Values
-        public void Location()
+        public Location()
         {
             Active = true;
         }

@@ -36,7 +36,8 @@ namespace WorkSchedule.Framework.Entities
 
         // Navigation Properties
         // To Many
-        public virtual ICollection<Schedule> Schedule { get; set; }
+        public virtual ICollection<Schedule> Schedules { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
         // To One
         public virtual PlacementContract PlacementContract { get; set; }
 

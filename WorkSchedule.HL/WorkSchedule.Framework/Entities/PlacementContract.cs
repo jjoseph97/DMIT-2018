@@ -24,7 +24,7 @@ namespace WorkSchedule.Framework.Entities
 
         // Navigation Properties
         // To many
-        public virtual ICollection<Shift> Shift { get; set; }
+        public virtual ICollection<Shift> Shifts { get; set; }
         // To one
         public virtual Location Location { get; set; }
     }

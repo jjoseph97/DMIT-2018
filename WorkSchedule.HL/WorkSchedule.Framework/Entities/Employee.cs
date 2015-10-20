@@ -33,10 +33,12 @@ namespace WorkSchedule.Framework.Entities
 
         // Navigation Properties
         // To Many
-        public virtual ICollection<Schedule> Schedule { get; set; }
+        public virtual ICollection<Schedule> Schedules { get; set; }
+        public virtual ICollection<Skill> Skills { get; set; }
+        public virtual ICollection<Shift> Shifts { get; set; }
 
         // Constructor for default values
-        public void Employee()
+        public Employee()
         {
             Active = true;
         }

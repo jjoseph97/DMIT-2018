@@ -22,6 +22,7 @@ namespace WorkSchedule.Framework.Entities
 
         // Navigation Properties
         // To Many  
-        public virtual ICollection<EmployeeSkill> EmployeeSkill { get; set; }
+        public virtual ICollection<EmployeeSkill> EmployeeSkills { get; set; }
+        public virtual ICollection<Employee> Employees { get; set; }
     }
 }

@@ -23,6 +23,6 @@ namespace WorkSchedule.Framework.Entities
         // Navigation Properties - Connections
         // To One
         public virtual Employee Employee { get; set; }
-        public virtual Skill SkillID { get; set; }
+        public virtual Skill Skill { get; set; }
     }
 }
