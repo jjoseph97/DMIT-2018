@@ -11,3 +11,4 @@
 from skill in Skills
 where skill.EmployeeSkills.Count() == 0
 select skill.Description
+

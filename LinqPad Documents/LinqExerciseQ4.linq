@@ -20,3 +20,4 @@ from shifts in Shifts
 		Days = Enum.GetName(typeof(DayOfWeek), dayGroup.Key),
 		EmployeesNeeded = dayGroup.Sum (aShift => aShift.NumberOfEmployees)
 	}
+	
