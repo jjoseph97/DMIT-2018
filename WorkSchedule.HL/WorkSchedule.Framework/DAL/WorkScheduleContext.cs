@@ -25,7 +25,7 @@ namespace WorkSchedule.Framework.DAL
         public DbSet<Skill> Skills { get; set; }
 
         // Details of entity models
-
+        /*
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder
@@ -49,5 +49,6 @@ namespace WorkSchedule.Framework.DAL
                 });
             base.OnModelCreating(modelBuilder);
         }
+         */
     }
 }
