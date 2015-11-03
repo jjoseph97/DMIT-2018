@@ -4,9 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WorkSchedule.Framework.Entities
 {
+    [Table("Locations")]
     public class Location
     {
         [Key]
@@ -32,7 +35,6 @@ namespace WorkSchedule.Framework.Entities
         [StringLength(50,MinimumLength=0,ErrorMessage = "Location.Contact: Length cannot exceed 50 characters")]
         public string Contact { get; set; }
 
-        [Phone]
         [Required(ErrorMessage="Location: A Phone is required(12)")]
         [StringLength(12,MinimumLength=12,ErrorMessage="Location.Phone: Length must be exactly 2 characters")]
         public string Phone { get; set; }

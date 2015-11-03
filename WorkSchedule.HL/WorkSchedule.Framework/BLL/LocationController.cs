@@ -17,7 +17,7 @@ namespace WorkSchedule.Framework.BLL
         [DataObjectMethod(DataObjectMethodType.Select,false)]
         public List<Location> ListLocations()
         {
-            using (var context = new WorkScheduleContext())
+            using (WorkScheduleContext context = new WorkScheduleContext())
             {
                 return context.Locations.ToList();
             }
@@ -33,7 +33,7 @@ namespace WorkSchedule.Framework.BLL
         }
 
         // Add new location
-        [DataObjectMethod(DataObjectMethodType.Insert,false)]
+        [DataObjectMethod(DataObjectMethodType.Insert, false)]
         public void AddNewLocation()
         {
             using (var context = new WorkScheduleContext())
@@ -41,8 +41,5 @@ namespace WorkSchedule.Framework.BLL
                 // Get the new stuff
             }
         }
-
-        
-
     }
 }

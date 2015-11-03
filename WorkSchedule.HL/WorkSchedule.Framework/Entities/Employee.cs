@@ -22,7 +22,6 @@ namespace WorkSchedule.Framework.Entities
         [StringLength(50, MinimumLength = 1, ErrorMessage = "Employee.LastName: Length must be 1-50")]
         public String LastName { get; set; }
 
-        [Phone]
         [Required(ErrorMessage = "Employee: A PhoneNumber is required(12 characters)")]
         [StringLength(12, ErrorMessage = "Employee.PhoneNumber: Length must 12")]
         public String HomePhone { get; set; }
