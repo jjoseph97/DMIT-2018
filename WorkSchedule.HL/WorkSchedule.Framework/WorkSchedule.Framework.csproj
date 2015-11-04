@@ -50,11 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\LocationController.cs" />
+    <Compile Include="BLL\ReportController.cs" />
     <Compile Include="DAL\WorkScheduleContext.cs" />
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\EmployeeSkill.cs" />
     <Compile Include="Entities\Location.cs" />
     <Compile Include="Entities\PlacementContract.cs" />
+    <Compile Include="Entities\POCOs\EmployeeSkillPOCO.cs" />
+    <Compile Include="Entities\POCOs\LocationPOCO.cs" />
     <Compile Include="Entities\Schedule.cs" />
     <Compile Include="Entities\Shift.cs" />
     <Compile Include="Entities\Skill.cs" />

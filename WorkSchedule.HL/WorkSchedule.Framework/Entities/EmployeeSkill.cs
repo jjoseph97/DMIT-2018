@@ -9,15 +9,22 @@ namespace WorkSchedule.Framework.Entities
 {
     public class EmployeeSkill
     {
+        public enum SkillLevel
+        {
+            Novice,
+            Proficent,
+            Expert
+        }
+
         [Key]
         [Required(ErrorMessage="EmployeeSkill: EmployeeSkillID is required ")]
-        public int EmployeeKillID { get; set; }
+        public int EmployeeSkillID { get; set; }
         [Required(ErrorMessage="EmployeeSkill: EmployeeID is required")]
         public int EmployeeID { get; set; }
         [Required(ErrorMessage="EmployeeSkill: SkillID is required")]
         public int SkillID { get; set; }
         [Required(ErrorMessage = "EmployeeSkill: Level is required")]
-        public int Level { get; set; }
+        public SkillLevel Level { get; set; }
         public int? YearsOfExperience { get; set; }
 
         // Navigation Properties - Connections

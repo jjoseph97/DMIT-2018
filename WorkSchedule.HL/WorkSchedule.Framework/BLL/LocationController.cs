@@ -24,21 +24,31 @@ namespace WorkSchedule.Framework.BLL
         }
         // Edit current location
         [DataObjectMethod(DataObjectMethodType.Update,false)]
-        public void EditCurLocation()
+        public void UpdateLocation(Location item)
         {
-            using (var contexst = new WorkScheduleContext())
+            using (var context = new WorkScheduleContext())
             {
                 // Edit current location
+                var attached = context.Locations.Attach(item);
+
+                var existing = context.Entry<Location>(attached);
+
+                existing.State = System.Data.Entity.EntityState.Modified;
+
+                context.SaveChanges();
             }
         }
 
         // Add new location
         [DataObjectMethod(DataObjectMethodType.Insert, false)]
-        public void AddNewLocation()
+        public void AddNewLocation(Location item)
         {
             using (var context = new WorkScheduleContext())
             {
                 // Get the new stuff
+                var added = context.Locations.Add(item);
+
+                context.SaveChanges();
             }
         }
     }
